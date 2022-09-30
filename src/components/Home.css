@@ -1,24 +1,40 @@
 .home_banner{
-    width: 100%;
-    /* height: 100%; */
-    border: 2px solid red;
-    /* border: 2px solid red; */
-    position: relative;
+    color: black;
 }
-.home_banner img{
+.banner_container img{
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    z-index: -2;
+}
+.banner_container{
+    position: relative;
+    height: 100%;
+}
+
+.home_banner h4{
+    font-size: 20px;
+    text-align: start;
+    
+}
+.home_banner span{
+    font-size: 15px;
 }
 .home_container{
     display: grid;
-    /* width: 100vw; */
-    height: 70vh;
     grid-template-columns: 60vw 38vw;
-    /* flex-direction: column; */
-    /* border: 2px solid rgb(74, 148, 74); */
 }
 .side_card_container{
     display: grid;
     grid-template-rows: repeat(3,1fr);
+}
+.author{
+    background-color: red;
+    color: white ;
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    margin: 0px 5px;
+
 }

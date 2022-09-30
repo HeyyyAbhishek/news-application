@@ -1,14 +1,13 @@
-// import { BrowserRouter, Route, Routes, Switch } from "react-router";
-import { BrowserRouter, Route, Routes} from "react-router-dom";
-import Navbar from "./components/Navbar";
+
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navbar/>}/>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 

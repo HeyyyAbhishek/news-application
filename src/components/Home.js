@@ -5,31 +5,41 @@ import FetchData from "./FetchData";
 
 function Home() {
   let article = FetchData(5, 1);
-
-  // let [title,setTitle] = useState()
-  // let [description,setDescription] = useState()
-  // let [imgURL,setImgURL] = useState()
-
-
   console.log(article, "fromHOME");
   return (
     <>
       <Navbar />
       <div className="home_container">
         <div className="home_banner">
-          <img src="" alt="card_images" />
-          <h4>sgfd</h4>
-          <p>sdfg</p>
+          {article.map((element, index) => {
+            return (
+              index < 1 && (
+                <>
+                  <div className="banner_container">
+                    <img src={element.urlToImage} alt="banner_image" />
+                  </div>
+                  <h4>
+                    {element.title}-
+                    <span className="author">{element.author}</span>
+                  </h4>
+                </>
+              )
+            );
+          })}
         </div>
         <div className="side_card_container">
           {article.map((element, index) => {
-            
             return (
-              index < 3 && <SideCard key={index + 1}
-                imgURL={element.urlToImage}
-                title={element.title}
-                description={element.description}
-              />
+              index >= 1 &&
+              index < 4 && (
+                <SideCard
+                  key={index + 1}
+                  imgURL={element.urlToImage}
+                  title={element.title}
+                  author={element.author}
+                  description={element.description}
+                />
+              )
             );
           })}
         </div>
