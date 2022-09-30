@@ -1,0 +1,30 @@
+.card_container{
+    display: flex;
+    cursor: pointer;
+    word-wrap: break-word;
+    transition: transform .5s;
+    padding: 10px;
+}
+.card_container h4,p{
+    word-wrap: break-word;
+}
+.card_container img{
+    height: 100%;
+    width: 40%;
+    /* background-size: contain; */
+    margin: 2px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+.card_info{
+    margin: auto;
+    align-items:space-between;
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.card_container:hover{
+    transform: scale(.95);
+}

@@ -1,0 +1,11 @@
+.nav_container{
+    height: 10vh;
+    width: 100%;
+}
+.nav_container ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid red;
+}
